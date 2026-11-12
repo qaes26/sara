@@ -324,20 +324,31 @@
     </div>
 
     <script>
-        // --- إعداد الأغنية (في نفس مسار ملف index.html) ---
-        const loveAudio = new Audio('song.mp3.mp4');
-        loveAudio.loop = true; 
+        // --- إعداد الأغنية (ملف song.mp3 بنفس مكان index.html) ---
+        const loveAudio = new Audio('song.mp3');
+        loveAudio.loop = true;
+        loveAudio.preload = 'auto';
         let isPlaying = false;
+
+        loveAudio.addEventListener('error', () => {
+            console.log('تعذر تحميل الأغنية، تأكد أن الملف song.mp3 مرفوع بنفس مكان index.html', loveAudio.error);
+        });
 
         window.toggleMusic = function() {
             if (isPlaying) {
                 loveAudio.pause();
                 isPlaying = false;
+                updateMusicUI();
             } else {
-                loveAudio.play().catch(e => console.log("تحتاج للتفاعل أولاً", e));
-                isPlaying = true;
+                loveAudio.play().then(() => {
+                    isPlaying = true;
+                    updateMusicUI();
+                }).catch(e => {
+                    console.log("تعذر تشغيل الأغنية", e);
+                    isPlaying = false;
+                    updateMusicUI();
+                });
             }
-            updateMusicUI();
         };
 
         window.updateMusicUI = function() {
@@ -568,4 +579,4 @@
         setInterval(createHearts, 10000);
     </script>
 </body>
-</html>
+                            </html>
