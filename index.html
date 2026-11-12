@@ -50,7 +50,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url('sara/IMG-20261112-WA0111.jpg'); 
+            background-image: url('IMG-20261112-WA0111.jpg'); 
             background-size: cover;
             background-position: center;
             overflow: hidden;
@@ -223,7 +223,7 @@
                     <button class="app-btn flex flex-col items-center gap-1" onclick="openApp('gallery')">
                         <div class="w-14 h-14 bg-gradient-to-tr from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg overflow-hidden border border-white/30">
                             <!-- أيقونة المعرض -->
-                            <img src="sara/IMG-20261112-WA0112.jpg" class="w-full h-full object-cover">
+                            <img src="IMG-20261112-WA0112.jpg" class="w-full h-full object-cover">
                         </div>
                         <span class="text-white text-xs font-medium text-shadow">المعرض</span>
                     </button>
@@ -324,8 +324,8 @@
     </div>
 
     <script>
-        // --- إعداد الأغنية (تقرأ الآن من داخل مجلد sara) ---
-        const loveAudio = new Audio('sara/song.mp3.mp4');
+        // --- إعداد الأغنية (في نفس مسار ملف index.html) ---
+        const loveAudio = new Audio('song.mp3.mp4');
         loveAudio.loop = true; 
         let isPlaying = false;
 
@@ -361,7 +361,7 @@
             }
         };
 
-        // --- محتوى التطبيقات (الصور تقرأ الآن من داخل مجلد sara) ---
+        // --- محتوى التطبيقات (الصور تقرأ من نفس المسار مباشرة) ---
         const appsData = {
             messages: {
                 title: "الرسائل",
@@ -377,25 +377,25 @@
                         <h2 class="text-xl font-bold text-gray-800 mb-4">ذكريات مصورة 📸</h2>
                         <div class="grid grid-cols-2 gap-3 pb-6">
                             <div class="rounded-xl overflow-hidden shadow-md aspect-square bg-gray-200">
-                                <img src="sara/IMG-20261112-WA0109.jpg" class="w-full h-full object-cover">
+                                <img src="IMG-20261112-WA0109.jpg" class="w-full h-full object-cover">
                             </div>
                             <div class="rounded-xl overflow-hidden shadow-md aspect-square bg-gray-200">
-                                <img src="sara/IMG-20261112-WA0110.jpg" class="w-full h-full object-cover">
+                                <img src="IMG-20261112-WA0110.jpg" class="w-full h-full object-cover">
                             </div>
                             <div class="rounded-xl overflow-hidden shadow-md aspect-square bg-gray-200">
-                                <img src="sara/IMG-20261112-WA0111.jpg" class="w-full h-full object-cover">
+                                <img src="IMG-20261112-WA0111.jpg" class="w-full h-full object-cover">
                             </div>
                             <div class="rounded-xl overflow-hidden shadow-md aspect-square bg-gray-200">
-                                <img src="sara/IMG-20261112-WA0112.jpg" class="w-full h-full object-cover">
+                                <img src="IMG-20261112-WA0112.jpg" class="w-full h-full object-cover">
                             </div>
                             <div class="rounded-xl overflow-hidden shadow-md aspect-square bg-gray-200">
-                                <img src="sara/IMG-20261112-WA0115.jpg" class="w-full h-full object-cover">
+                                <img src="IMG-20261112-WA0115.jpg" class="w-full h-full object-cover">
                             </div>
                             <div class="rounded-xl overflow-hidden shadow-md aspect-square bg-gray-200">
-                                <img src="sara/IMG-20261112-WA0116.jpg" class="w-full h-full object-cover">
+                                <img src="IMG-20261112-WA0116.jpg" class="w-full h-full object-cover">
                             </div>
                             <div class="rounded-xl overflow-hidden shadow-md aspect-square bg-gray-200 col-span-2">
-                                <img src="sara/IMG-20261112-WA0118.jpg" class="w-full h-full object-cover">
+                                <img src="IMG-20261112-WA0118.jpg" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>`
@@ -407,7 +407,7 @@
                     <div class="flex flex-col items-center">
                         <div id="music-record-player" class="w-40 h-40 rounded-full shadow-lg mb-6 overflow-hidden border-4 border-red-100">
                             <!-- صورة القرص الدوار -->
-                            <img src="sara/IMG-20261112-WA0118.jpg" class="w-full h-full object-cover">
+                            <img src="IMG-20261112-WA0118.jpg" class="w-full h-full object-cover">
                         </div>
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">كلمات</h2>
                         <p class="text-sm text-red-500 font-bold mb-6">إهداء إلى سارة ظاظا</p>
